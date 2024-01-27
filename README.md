@@ -31,8 +31,8 @@ If you have your own CrackMe challenges or suggestions to help me overcome procr
 
 ## About the Author
 
-Hello! I'm Salah-Eddine El Ouali, also known as Saladin or saladin0x1, 
+Hello! I'm Salah-Eddine El Ouali, also known as saladin0x1, 
 and this repository is my journey to overcome procrastination through engaging in programming challenges.
-Feel free to connect with me on Twitter: [@saladin0x1](https://twitter.com/saladin0x1).
+Feel free to connect with me on Twitter: [@saladin0x1](https://twitter.com/selouali01).
 
 Happy Cracking!
