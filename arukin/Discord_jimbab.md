@@ -3,16 +3,19 @@ If you look in the Dialog function located at 0x401180
 you will find a variable that is stored at ESP+0x10
 it seems to be an int[64] type, I think this is the layout for a chess board (8 x 8 = 64)
 
-first your input is checked if it is less than 128 in length:
+#First your input is checked if it is less than 128 in length:
+
 // esp + 0x110 is first arg for this function which receives the return result from GetDlgItemTextA from main function, it is the length of the input you provide
+```
 .text:00401006                 cmp     [esp + 0x110], 128 
 .text:00401011                 push    edi
 .text:00401012                 mov     edi, eax
 .text:00401014                 jnb     short loc_401020
+```
 
 
-.
-then, the algorithm below iterates through the input and maps it to the int[8][8] variable:
+#Then, the algorithm below iterates through the input and maps it to the int[8][8] variable:
+```
 .text:00401031                 mov     al, [edi+esi*2]
 .text:00401034                 mov     cl, [edi+esi*2+1]
 .text:00401038                 lea     edx, [esp+118h+String]
@@ -35,9 +38,10 @@ then, the algorithm below iterates through the input and maps it to the int[8][8
 .text:0040106C                 mov     [esp+118h+var_104], eax
 .text:00401070                 xor     edx, edx
 .text:00401072                 lea     esi, [esp+118h+var_100]
+```
 
-
-this is a loose translation of this:
+#This is a loose translation of this:
+```
 for (i = 0; i < 64; ++i)
   {
     String[0] = *(u8*)(b + 2 * i);
@@ -47,6 +51,7 @@ for (i = 0; i < 64; ++i)
     e = i & 7;
     board[8 * d + e] = c;
   }
+```
 then there a 4 or 5 more blocks of code you have to analyse, but it does seems to indeed be the Knights Tour algorithm
 
 
@@ -59,6 +64,8 @@ Knight's Tour
 
 
 you can recognise the Knight movement because of these decompiled blocks of code from 0x4010E4 - 0x40101F:
+
+```
 LABEL_20:
     v20 = v14;
     if ( v14 > v30 || (v20 = v30, v21 = v14, v14 >= v30) )
@@ -81,3 +88,4 @@ LABEL_35:
         v27 = v31;
       if ( v26 - v27 != 2 )
         return 0;
+```
