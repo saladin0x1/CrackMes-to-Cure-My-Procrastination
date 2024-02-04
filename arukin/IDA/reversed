@@ -1,0 +1,164 @@
+// Function to validate if a given sequence represents a knight's tour on an 8x8 chessboard
+int __usercall sub_401000@<eax>(int a1@<eax>, unsigned int a2)
+{
+  int i; // Loop counter
+  char v5; // Temporary variable for parsing characters
+  int v6; // Parsed integer value
+  unsigned int v7; // Temporary variable for calculating array index
+  int v8; // Temporary variable for calculating array index
+  int v9; // Loop counter for finding the starting position
+  int *v10; // Pointer to the 2D array representing the chessboard
+  int v11; // Loop counter
+  int *v12; // Pointer for traversing the chessboard array
+  int v13; // Counter for knight's tour moves
+  int v14; // X-coordinate of the knight's current position
+  int v15; // Y-coordinate of the knight's current position
+  int v16; // Temporary variable for calculating array index
+  int *v17; // Pointer to traverse the chessboard array
+  int v18; // Loop counter
+  int *v19; // Pointer for traversing the chessboard array
+  int v20; // Temporary variable for calculating array index
+  int v21; // Temporary variable for calculating array index
+  int v22; // Temporary variable for calculating array index
+  int v23; // Temporary variable for calculating array index
+  int v24; // Temporary variable for calculating array index
+  int v25; // Temporary variable for calculating array index
+  int v26; // Temporary variable for calculating array index
+  int v27; // Temporary variable for calculating array index
+  char String; // Temporary buffer for parsing characters
+  __int16 v29; // Temporary variable for parsing characters
+  int v30; // X-coordinate of the starting position
+  int v31; // Y-coordinate of the starting position
+  int v32[64]; // 2D array representing the chessboard, storing the knight's tour moves
+
+  // Check if the input length is less than 0x80
+  if (a2 < 0x80)
+    return 0; // Invalid input length
+
+  // Parse the input serial and populate the 2D array representing the chessboard
+  v29 = 0;
+  for (i = 0; i < 64; ++i)
+  {
+    v5 = *(_BYTE *)(a1 + 2 * i + 1);
+    String = *(_BYTE *)(a1 + 2 * i);
+    LOBYTE(v29) = v5;
+    v6 = atoi(&String);
+    v7 = (unsigned int)i >> 3;
+    v8 = i & 7;
+    v32[8 * v7 + v8] = v6;
+  }
+
+  v30 = 100;
+  v31 = 100;
+  v9 = 0;
+  v10 = v32;
+
+  // Find the starting position (first occurrence of 0) on the chessboard
+  while (2)
+  {
+    v11 = 0;
+    v12 = v10;
+    do
+    {
+      if (!*v12)
+      {
+        v30 = v9;
+        v31 = v11;
+        goto LABEL_STARTING_POSITION_FOUND;
+      }
+      ++v11;
+      ++v12;
+    } while (v11 < 8);
+
+    ++v9;
+    v10 += 8;
+
+    if (v9 < 8)
+      continue;
+
+    break;
+  }
+
+LABEL_STARTING_POSITION_FOUND:
+  v13 = 1;
+
+  // Check for the knight's tour pattern
+  while (1)
+  {
+    v14 = 100;
+    v15 = 100;
+    v16 = 0;
+    v17 = v32;
+
+    while (2)
+    {
+      v18 = 0;
+      v19 = v17;
+
+      do
+      {
+        if (*v19 == v13)
+        {
+          v14 = v16;
+          v15 = v18;
+          goto LABEL_KNIGHT_TOUR_MOVE_FOUND;
+        }
+        ++v18;
+        ++v19;
+      } while (v18 < 8);
+
+      ++v16;
+      v17 += 8;
+
+      if (v16 < 8)
+        continue;
+
+      break;
+    }
+
+LABEL_KNIGHT_TOUR_MOVE_FOUND:
+    v20 = v14;
+    if (v14 > v30 || (v20 = v30, v21 = v14, v14 >= v30))
+      v21 = v30;
+
+    // Check conditions related to knight's tour moves
+    if (v20 - v21 != 2)
+      goto LABEL_KNIGHT_TOUR_INVALID;
+
+    v22 = v15;
+    if (v15 > v31 || (v22 = v31, v23 = v15, v15 >= v31))
+      v23 = v31;
+
+    // Check conditions related to knight's tour moves
+    if (v22 - v23 != 1)
+      goto LABEL_KNIGHT_TOUR_INVALID;
+
+    // Check conditions related to knight's tour moves
+    v24 = v14;
+    if (v14 > v30 || (v24 = v30, v25 = v14, v14 >= v30))
+      v25 = v30;
+
+    // Check conditions related to knight's tour moves
+    if (v24 - v25 != 1)
+      goto LABEL_KNIGHT_TOUR_INVALID;
+
+    v26 = v15;
+    if (v15 > v31 || (v26 = v31, v27 = v15, v15 >= v31))
+      v27 = v31;
+
+    // Check conditions related to knight's tour moves
+    if (v26 - v27 != 2)
+      goto LABEL_KNIGHT_TOUR_INVALID;
+
+    ++v13;
+    v30 = v14;
+    v31 = v15;
+
+    // Check if the knight's tour is complete
+    if (v13 >= 64)
+      return 1; // Valid knight's tour
+  }
+
+LABEL_KNIGHT_TOUR_INVALID:
+  return 0; // Invalid knight's tour
+}
