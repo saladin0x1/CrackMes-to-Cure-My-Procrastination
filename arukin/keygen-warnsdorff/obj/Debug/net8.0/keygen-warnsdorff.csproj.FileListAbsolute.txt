@@ -1,0 +1,15 @@
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/bin/Debug/net8.0/keygen-warnsdorff
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/bin/Debug/net8.0/keygen-warnsdorff.deps.json
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/bin/Debug/net8.0/keygen-warnsdorff.runtimeconfig.json
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/bin/Debug/net8.0/keygen-warnsdorff.dll
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/bin/Debug/net8.0/keygen-warnsdorff.pdb
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.GeneratedMSBuildEditorConfig.editorconfig
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.AssemblyInfoInputs.cache
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.AssemblyInfo.cs
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.csproj.CoreCompileInputs.cache
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.sourcelink.json
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.dll
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/refint/keygen-warnsdorff.dll
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.pdb
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/keygen-warnsdorff.genruntimeconfig.cache
+/home/saladin/Documents/CrackMes-to-Cure-My-Procrastination/arukin/keygen-warnsdorff/obj/Debug/net8.0/ref/keygen-warnsdorff.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "keygen-warnsdorff/1.0.0": {
+        "runtime": {
+          "keygen-warnsdorff.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "keygen-warnsdorff/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
