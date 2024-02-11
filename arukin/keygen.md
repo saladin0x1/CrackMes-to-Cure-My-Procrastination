@@ -1,3 +1,5 @@
+I am thankful to [Jimmy-Baby](https://github.com/Jimmy-Baby) for the valuable assistance.
+
 # Knight's Tour Solver (keygen)
 
 ## Object-Oriented Design Overview:
